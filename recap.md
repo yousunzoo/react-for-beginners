@@ -88,3 +88,9 @@
   - check) onClick 이벤트 안에 `{deleteBtn(index)}`가 아니라 `onClick={() => deleteBtn(index)}`를 입력하는 이유 : 바로 실행되지 않고 클릭을 기다리는 함수로 쓰기 위함
 
 --> 해당 인덱스를 갖지 않는 값들만 필터링해서 반환
+
+<br/>
+
+---
+
+# Coin Tracker
