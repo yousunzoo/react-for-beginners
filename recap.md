@@ -69,7 +69,22 @@
 ## .map()
 
 `[].map((item, index)=>{})`
-: 배열을 갖고 있을 때 각각의 element들을 callback 함수를 이용해 원하는 형태로 바꿀 수 있게 해줌.
-: 첫 번째 인자로는 배열 값을, 두 번째 인자로는 해당 값의 인덱스를 가져올 수 있다.
 
-- <li>를 작성할 때 각자 고유의 key 값이 필요하다. 일반적으로는 index 값 사용
+- 배열을 갖고 있을 때 각각의 element들을 callback 함수를 이용해 원하는 형태로 바꿀 수 있게 해줌.
+- 첫 번째 인자로는 배열 값을, 두 번째 인자로는 해당 값의 인덱스를 가져올 수 있다.
+
+- `<li>`를 작성할 때 각자 고유의 key 값이 필요하다. 일반적으로는 index 값 사용
+
+## .filter()
+
+`[].filter((item, index)=>{})`
+
+- callback 함수에 해당하는 내용을 걸러내 줌
+- toDo li 삭제하는데 사용
+- item 대신 _를 입력하면 index 값만 가져와서 사용
+  <br/>
+  `const deleteBtn = (index) => { setToDos((current)=> current.filter((_, curIndex)=> curIndex !== index )) }`<br /> jsx 구문에서는`<button onClick={() => deleteBtn(index)}>❌</button>`
+  <br/>
+  - check) onClick 이벤트 안에 `{deleteBtn(index)}`가 아니라 `onClick={() => deleteBtn(index)}`를 입력하는 이유 : 바로 실행되지 않고 클릭을 기다리는 함수로 쓰기 위함
+
+--> 해당 인덱스를 갖지 않는 값들만 필터링해서 반환
