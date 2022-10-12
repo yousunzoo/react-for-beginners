@@ -48,5 +48,28 @@
 
 ## Cleanup
 
-- callback 함수 안에 return (cleanUp function) 입력하면 컴포넌트가 마운트 해제될 때 cleanUp function이 실행된다.
--
+- useEffect의 callback 함수 안에 return (cleanUp function) 입력하면 useEffect의 subscription을 종료할 때 즉, 컴포넌트가 마운트 해제될 때 cleanUp function이 실행된다.
+- 메모리 누수를 방지하기 위해 사용된다.
+
+---
+
+<br />
+
+---
+
+# To Do List
+
+- form은 기본적으로 submit 이벤트를 가짐. event.preventDefault() 이용하여 기본 동작 막은 후, input에 todo 입력하고 button 누르면 toDo를 받는 배열 생성
+- state는 직접적으로 수정 불가능, setState를 이용하여 수정해야 함.
+- check) console.log(toDos)를 onSubmit 함수 안에 입력했을 때 해당 toDo가 빠진 상태로 출력되고 그 다음 실행시에 출력되는 이유
+  => setState는 비동기 함수, 컴포넌트가 렌더링 될 때 이전값을 기준으로 판단되기 때문.
+
+- 이전 배열에 새로운 요소 추가하는 방법 : `setTodos((prev)=> [toDo, ...prev])`
+
+## .map()
+
+`[].map((item, index)=>{})`
+: 배열을 갖고 있을 때 각각의 element들을 callback 함수를 이용해 원하는 형태로 바꿀 수 있게 해줌.
+: 첫 번째 인자로는 배열 값을, 두 번째 인자로는 해당 값의 인덱스를 가져올 수 있다.
+
+- <li>를 작성할 때 각자 고유의 key 값이 필요하다. 일반적으로는 index 값 사용
