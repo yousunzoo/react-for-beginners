@@ -47,3 +47,6 @@
 - propType을 설치해 props의 타입을 지정해 줄 수 있다. isRequired로 필수값 지정 가능
 
 ## Cleanup
+
+- callback 함수 안에 return (cleanUp function) 입력하면 컴포넌트가 마운트 해제될 때 cleanUp function이 실행된다.
+-
