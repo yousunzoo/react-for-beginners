@@ -93,4 +93,6 @@
 
 ---
 
-# Coin Tracker
+# Movie App
+
+- .then 대신에 async-await 함수 사용가능
