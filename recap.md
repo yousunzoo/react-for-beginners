@@ -96,3 +96,10 @@
 # Movie App
 
 - .then 대신에 async-await 함수 사용가능
+
+## react-router-dom
+
+- router : 링크가 수정되는 값을 바라본다.
+- path로 해당 값을 설정할 수 있다.
+- path로 설정된 해당 값을 참고하여 router 안에 있는 컴포넌트로 이동한다.
+- link to로 컴포넌트를 할당하여 해당 컴포넌트로 이동할 수 있다. 함수와 같은 성질을 지닌ㄷ나.
