@@ -126,6 +126,9 @@ p {
   padding: 100px 0;
 }
 
+.detail__container .loader {
+  color: white;
+}
 .detail__container .card {
   display: flex;
   width: 60%;
@@ -175,13 +178,13 @@ p {
   .movies .movie {
     width: 45%;
   }
+
+  .detail__container .card {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 770px) {
-  .navigator {
-    display: none;
-  }
-
   .movies {
     padding: 20px 0;
   }
@@ -209,5 +212,36 @@ p {
 
   .movie__genres {
     flex-wrap: wrap;
+  }
+
+  .detail__container {
+    min-height: 1000px;
+    height: auto;
+  }
+
+  .detail__container .card {
+    display: block;
+    width: 80%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .detail__container .card img {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .detail__title {
+    font-size: 20px;
+  }
+
+  .detail__info > p,
+  .detail__rate > p {
+    font-size: 12px;
+  }
+
+  .detail__desc {
+    font-size: 16px;
   }
 }

@@ -1,9 +1,9 @@
 import MovieDetail from "../components/MovieDetail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "../css/Detail.module.css";
 
-function Detail() {
+function Detail(props) {
+  console.log(props);
   const [loading, setLoading] = useState(true);
   const [movie, setMovie] = useState([]);
   const { id } = useParams();

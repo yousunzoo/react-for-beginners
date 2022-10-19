@@ -7,9 +7,6 @@ function Navigation() {
         <li>
           <Link to="/react-for-beginners">Home</Link>
         </li>
-        <li>
-          <Link to="/react-for-beginners/movie-detail">About</Link>
-        </li>
       </ul>
     </section>
   );
