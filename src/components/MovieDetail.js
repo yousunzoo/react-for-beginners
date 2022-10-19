@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import styles from "../css/Detail.module.css";
 function MovieDetail({
   coverImg,
   title,
@@ -12,21 +11,21 @@ function MovieDetail({
   like,
 }) {
   return (
-    <div className={styles.detail}>
+    <div className="card">
       <img src={coverImg} alt={title} />
-      <div className={styles.movie_desc}>
-        <h2 className={styles.movie_title}>{title}</h2>
-        <div className={styles.movie_info}>
+      <div className="detail">
+        <h2 className="detail__title">{title}</h2>
+        <div className="detail__info">
           <p>{year}년</p>
           <p>{runtime}분</p>
         </div>
-        <div className={styles.movie_rate}>
+        <div className="detail__rate">
           <p>rate : {rating}</p>
           <p>download : {download}</p>
           <p>likes : {like}</p>
         </div>
-        <p className={styles.description}>{description}</p>
-        <ul className={styles.genres}>
+        <p className="detail__desc">{description}</p>
+        <ul className="detail__genres">
           {genres && genres.map((g) => <li key={g}>{g}</li>)}
         </ul>
       </div>

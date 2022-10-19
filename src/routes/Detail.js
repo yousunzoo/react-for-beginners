@@ -22,9 +22,11 @@ function Detail() {
   }, []);
 
   return (
-    <div className={styles.detail_container}>
+    <section className="container detail__container">
       {loading ? (
-        <h1 className={styles.loading}>Loading..</h1>
+        <div className="loader">
+          <span>Loading...</span>
+        </div>
       ) : (
         <MovieDetail
           key={movie.id}
@@ -39,7 +41,7 @@ function Detail() {
           like={movie.like_count}
         />
       )}
-    </div>
+    </section>
   );
 }
 export default Detail;
